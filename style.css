@@ -49,7 +49,3 @@ body {
 .immagini img.active {
     display: inline-block;
 }
-
-/* .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-} */
