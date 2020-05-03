@@ -15,6 +15,24 @@
 .slider {
     height: 60%;
     width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
+}
+
+.prev, .immagini, .next {
+    float: left;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.prev, .next {
+    width: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.immagini {
+    width: 90%;
+}
+
+.next {
+    justify-content: flex-end;
 }
