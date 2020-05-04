@@ -66,3 +66,21 @@ body {
 .cerchi i.active {
     color: white;
 }
+
+.buttons {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    bottom: 6px;
+    left: 5%;
+    transform: translateX(-50%);
+}
+.play, .pausa {
+    float: left;
+    margin: 0 10px;
+}
+
+.play:hover, .pausa:hover {
+     color: white;
+     cursor: pointer;
+}

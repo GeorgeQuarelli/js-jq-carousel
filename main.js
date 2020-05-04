@@ -1,6 +1,8 @@
+$('.next').click(next);
+$('.prev').click(prev);
 //click sucessivo
 //intercettare il click sulla classe next
-$('.next').click(function() {
+function next() {
     //recupero l'img che ha la classe active
     var img_corrente = $ ('img.active');
     console.log(img_corrente);
@@ -26,11 +28,11 @@ $('.next').click(function() {
         img_successiva.addClass('active');
         $('.fa-circle:first-child').addClass('active');
     }
-});
+};
 
 //click precedente
 //intercettare il click sulla classe prev
-$('.prev').click(function() {
+function prev () {
     //recupero l'img che ha la classe active
     var img_corrente = $ ('img.active');
     // recupero il pallino corrente
@@ -55,4 +57,14 @@ $('.prev').click(function() {
         img_precedente.addClass('active');
         $('.fa-circle:last-child').addClass('active');
     }
+};
+//Play e Pausa
+var timer;
+//intercetto il click su play e gli applico il setInterval per avviare le immagini ogni 3 secondi
+$('.play').click(function() {
+    timer = setInterval(next, 3000);
+});
+//Intercetto il click su pause per interrompere ila riproduzione ogni 3 secondi
+$('.pausa').click(function() {
+    clearInterval(timer);
 });
