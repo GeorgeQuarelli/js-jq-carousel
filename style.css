@@ -38,6 +38,7 @@ body {
     width: 90%;
     text-align: center;
     border: 5px solid black;
+    position: relative;
 }
 
 .immagini img {
@@ -52,7 +53,7 @@ body {
 
 .cerchi {
     position: absolute;
-    bottom: 150px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
