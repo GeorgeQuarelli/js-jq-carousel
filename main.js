@@ -33,7 +33,6 @@ $('.next').click(function() {
 $('.prev').click(function() {
     //recupero l'img che ha la classe active
     var img_corrente = $ ('img.active');
-    console.log(img_corrente);
     // recupero il pallino corrente
     var pallino_corrente = $('.fa-circle.active');
     //tolgo la classe active all img img_corrente
@@ -41,19 +40,19 @@ $('.prev').click(function() {
     // tolgo la classe active al pallino corrente
    pallino_corrente.removeClass('active');
     //recupero l'immagine sucessiva
-    var img_successiva = img_corrente.prev('img');
+    var img_precedente = img_corrente.prev('img');
     // recupero il pallino precedente
  var pallino_precedente = pallino_corrente.prev('.fa-circle');
-    console.log(img_successiva);
-    //verifico cche ci sia un img
-    if(img_successiva.length != 0) {
 
-        img_successiva.addClass('active');
-          pallino_precedente.addClass('active');
+    //verifico cche ci sia un img
+    if(img_precedente.length != 0) {
+
+        img_precedente.addClass('active');
+        pallino_precedente.addClass('active');
     } else {
 
-        img_successiva = $('img:last-child');
-        img_successiva.addClass('active');
+        img_precedente = $('img:last-of-type');
+        img_precedente.addClass('active');
         $('.fa-circle:last-child').addClass('active');
     }
 });
