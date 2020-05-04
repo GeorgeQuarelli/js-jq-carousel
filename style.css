@@ -49,3 +49,19 @@ body {
 .immagini img.active {
     display: inline-block;
 }
+
+.cerchi {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cerchi i {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.cerchi i.active {
+    color: white;
+}
